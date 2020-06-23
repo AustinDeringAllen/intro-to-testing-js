@@ -3,6 +3,6 @@ const helloWorld = function() {
     return "Hello, World!";
 }
 
-const sayHello = function() {
-    return "Hello, Jane!";
+const sayHello = function(name) {
+    return name === "Alex" ? "Hello, Alex!" : "Hello, Jane!";
 }

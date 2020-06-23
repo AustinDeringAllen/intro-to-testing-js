@@ -17,3 +17,11 @@ const isFive = function(num) {
     else
         return false;
 }
+
+const isEven = function(input) {
+    if(typeof input !== 'number') {
+        return false;
+    } else {
+        return input % 2 === 0;
+    }
+}

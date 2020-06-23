@@ -29,7 +29,19 @@ describe('sayHello', function() {
     });
     it('should return "Hello, Pat!"', function() {
         expect(sayHello("Pat")).toBe("Hello, Pat!");
-    })
+    });
+    it('should return "Hello, World!" if no argument is passed in', function() {
+        expect(sayHello()).toBe("Hello, World!");
+    });
+    it('should return "Hello, World!" if an empty string is passed in', function() {
+        expect(sayHello('')).toBe("Hello, World!");
+    });
+    it('should return "Hello, World!" if a non-string is passed in', function() {
+        expect(sayHello(null)).toBe("Hello, World!");
+    });
+    it('should return "Hello, World!" if a string with a number is passed in', function() {
+        expect(sayHello('42')).toBe("Hello, World!");
+    });
 })
 
 // describe('isEven',function() {

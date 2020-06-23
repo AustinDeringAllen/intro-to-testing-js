@@ -10,3 +10,10 @@ const sayHello = function(name) {
         return "Hello, " + name + "!";
     }
 }
+
+const isFive = function(num) {
+    if(num == 5)
+        return true;
+    else
+        return false;
+}

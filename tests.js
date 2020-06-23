@@ -42,6 +42,24 @@ describe('sayHello', function() {
     it('should return "Hello, World!" if a string with a number is passed in', function() {
         expect(sayHello('42')).toBe("Hello, World!");
     });
+});
+
+describe('isFive',function() {
+    it('should be a defined function',function() {
+        expect(typeof isFive).toBe('function');
+    });
+    it('should return a boolean',function() {
+        expect(typeof isFive()).toBe('boolean');
+    });
+    it('should return true when passed 5',function() {
+        expect(isFive(5)).toBe(true);
+    });
+    it('should return true when passed "5"',function() {
+        expect(isFive("5")).toBe(true);
+    });
+    it('should return false when passed 4',function() {
+        expect(isFive(4)).toBe(false);
+    });
 })
 
 // describe('isEven',function() {

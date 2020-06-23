@@ -104,14 +104,38 @@ describe('isEven',function() {
     });
 });
 
-// describe('isEven',function() {
-//     it('Should be a defined function', function() {
-//         expect(typeof isEven).toBe('function');
-//     });
-//     it('Should return a boolean value when called', function() {
-//         expect(typeof isEven).toBe('boolean');
-//     });
-//     it('Should return true when passed the value 10'), function() {
-//         expect(isEven(10)).toBe(true);
-//     }
-// });
+describe('isVowel',function() {
+    it('should be a defined function',function() {
+        expect(typeof isVowel).toBe('function');
+    });
+    it('should return a boolean',function() {
+        expect(typeof isVowel()).toBe('boolean');
+    });
+    it('should return true for a',function() {
+        expect(isVowel("a")).toBe(true);
+    });
+    it('should return true for A',function() {
+        expect(isVowel("A")).toBe(true);
+    });
+    it('should return false for y',function() {
+        expect(isVowel("y")).toBe(false);
+    });
+    it('should return false for 4',function() {
+       expect(isVowel(4)).toBe(false);
+    });
+    it('should return false for true',function() {
+        expect(isVowel(true)).toBe(false);
+    });
+    it('should return false for false',function() {
+        expect(isVowel(false)).toBe(false);
+    });
+    it('should return false for banana',function() {
+        expect(isVowel("banana")).toBe(false);
+    });
+    it('should return false if the argument is left empty',function() {
+        expect(isVowel()).toBe(false);
+    });
+    it('should return true for e',function() {
+       expect(isVowel('e')).toBe(true);
+    });
+})

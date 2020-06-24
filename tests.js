@@ -168,4 +168,7 @@ describe('add',function() {
     it('should return NaN if no arguments are passed in',function() {
         expect(isNaN(add())).toBe(isNaN(NaN));
     });
+    it('should return -10 if passed -5 and -5',function() {
+        expect(add(-5,-5)).toBe(-10);
+    })
 });

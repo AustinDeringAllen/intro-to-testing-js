@@ -138,4 +138,34 @@ describe('isVowel',function() {
     it('should return true for e',function() {
        expect(isVowel('e')).toBe(true);
     });
-})
+});
+
+describe('add',function() {
+    it('should be a defined function',function() {
+        expect(typeof add).toBe('function');
+    });
+    it('should return a number',function() {
+        expect(typeof add()).toBe('number');
+    });
+    it('should return the number 4 when passed in 2 and 2',function() {
+        expect(add(2,2)).toBe(4);
+    });
+    it('should return the number 6 when passed in 4 and 2',function() {
+        expect(add(4,2)).toBe(6);
+    });
+    it('should return the number 8 when passed in 4 and "4"',function() {
+        expect(add(4,"4")).toBe(8);
+    });
+    it('should return NaN if passed in strings with no number',function() {
+       expect(isNaN(add("banana","split"))).toBe(isNaN(NaN));
+    });
+    it('should return 6 if passed in -4 and 10',function() {
+        expect(add(-4,10)).toBe(6);
+    });
+    it('should return NaN if passed in a string and a number',function() {
+        expect(isNaN(add(2,"apples"))).toBe(isNaN(NaN));
+    });
+    it('should return NaN if no arguments are passed in',function() {
+        expect(isNaN(add())).toBe(isNaN(NaN));
+    });
+});

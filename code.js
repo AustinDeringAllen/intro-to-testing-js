@@ -47,10 +47,6 @@ function isVowel(input) {
     return returnValue;
 }
 
-
-// const isVowel = function(vowel) {
-//     if(vowel.length === 1) {
-//     } else {
-//         return false;
-//     }
-// }
+function add(numOne,numTwo) {
+    return parseFloat(numOne) + parseFloat(numTwo);
+}
